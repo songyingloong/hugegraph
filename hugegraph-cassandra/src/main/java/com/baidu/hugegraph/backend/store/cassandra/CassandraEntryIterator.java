@@ -111,6 +111,8 @@ public class CassandraEntryIterator extends BackendEntryIterator {
 
     @Override
     protected String pageState() {
+//        System.out.println("isExhausted\t:\t" + this.results.isExhausted());
+//        System.out.println("isFullyFetched\t:\t" + this.results.isFullyFetched());
         PagingState page = this.results.getExecutionInfo().getPagingState();
         if (page == null || this.results.isExhausted()) {
             return null;

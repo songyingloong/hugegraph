@@ -96,8 +96,7 @@ public class MysqlEntryIterator extends BackendEntryIterator {
             return null;
         }
         MysqlBackendEntry entry = (MysqlBackendEntry) this.last;
-        PageState pageState = new PageState(entry.columnsMap());
-        return pageState.toString();
+        return new PageState(entry.columnsMap()).toString();
     }
 
     @Override
